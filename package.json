@@ -1,0 +1,60 @@
+{
+  "name": "typeorm-index-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --passWithNoTests --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thonythony/typeorm-index-mongo.git"
+  },
+  "jest": {
+    "cache": false,
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "!<rootDir>/src/{app,configure,server}.ts",
+      "!<rootDir>/src/utils/**/*.ts",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.spec.+(ts|tsx|js)"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!lodash-es)"
+    ],
+    "testEnvironment": "<rootDir>/mongo-environment.js",
+    "globalSetup": "<rootDir>/setup.js",
+    "globalTeardown": "<rootDir>/teardown.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thonythony/typeorm-index-mongo/issues"
+  },
+  "homepage": "https://github.com/thonythony/typeorm-index-mongo#readme",
+  "dependencies": {
+    "class-validator": "^0.8.5",
+    "mongodb": "^3.0.7",
+    "typeorm": "^0.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.6",
+    "jest": "^22.4.3",
+    "jest-environment-node": "^22.4.3",
+    "mongodb-memory-server": "^1.7.3",
+    "typescript": "^2.8.3",
+    "prettier": "^1.11.1"
+  }
+}
