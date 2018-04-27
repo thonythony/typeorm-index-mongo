@@ -4,38 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --runInBand"
+    "test": "tsc && node ./dist/test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thonythony/typeorm-index-mongo.git"
-  },
-  "jest": {
-    "cache": false,
-    "verbose": true,
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "!<rootDir>/src/{app,configure,server}.ts",
-      "!<rootDir>/src/utils/**/*.ts",
-      "<rootDir>/src/**/*.ts"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
-    },
-    "testMatch": [
-      "**/__tests__/*.spec.+(ts|tsx|js)"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!lodash-es)"
-    ],
-    "testEnvironment": "<rootDir>/mongo-environment.js",
-    "globalSetup": "<rootDir>/setup.js",
-    "globalTeardown": "<rootDir>/teardown.js"
   },
   "author": "",
   "license": "ISC",
@@ -49,11 +22,7 @@
     "typeorm": "^0.2.3"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.3",
     "@types/node": "^9.6.6",
-    "jest": "^22.4.3",
-    "jest-environment-node": "^22.4.3",
-    "mongodb-memory-server": "^1.7.3",
     "typescript": "^2.8.3",
     "prettier": "^1.11.1"
   }
